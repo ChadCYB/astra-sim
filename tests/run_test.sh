@@ -40,8 +40,8 @@ echo "=====" >> ${OUTPUT_DIR}/log.txt
 
 # Run ASTRA-sim and capture both output and errors, append the output to log.txt
 (
-cd ${ASTRA_SIM_BUILD_DIR}
-${COMMAND} >> ${OUTPUT_DIR}/log.txt 2>&1
+  cd "${ASTRA_SIM_BUILD_DIR}"
+  ${COMMAND} 2>&1 | tee -a "${OUTPUT_DIR}/log.txt"
 )
 
 # Record end time (in milliseconds)
