@@ -28,7 +28,7 @@ START_TIME=$(($(date +%s%N) / 1000000))
 
 # Create the full command to run
 COMMAND="${ASTRA_SIM} \
-    --workload-configuration=${SCRIPT_DIR}/inputs/workloads/gpt2/distilgpt2_8gpus \
+    --workload-configuration=${SCRIPT_DIR}/inputs/workloads/allreduce_1D/allreduce \
     --system-configuration=${SCRIPT_DIR}/inputs/systems/Ring_sys.json \
     --remote-memory-configuration=${SCRIPT_DIR}/inputs/systems/RemoteMemory.json \
     --logical-topology-configuration=${SCRIPT_DIR}/inputs/systems/logical_8nodes_1D.json \
