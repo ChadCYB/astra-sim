@@ -24,8 +24,7 @@ build/astra_garnet/result/
 
 # logs
 **/*.log
-**/outputs
-!**/outputs/.gitkeep 
+**/visualize/*.png
 
 # runs
 runs
